@@ -1,34 +1,34 @@
 import sys
 
 def count_bytes():
-    with open("test.txt", "r", encoding="utf-8") as file:  # Open in text mode
-        content = file.read()  # Read the file as text
-        bytes_count = len(content.encode('utf-8'))  # Convert text to bytes
+    with open("test.txt", "r", encoding="utf-8") as file: 
+        content = file.read() 
+        bytes_count = len(content.encode('utf-8')) 
         print(bytes_count)
 
 def count_lines():
-    with open("test.txt", "r", encoding="utf-8") as file:  # Open in text mode
-        content = file.readlines()  # Read all the lines
-        print(len(content))  # Count lines
+    with open("test.txt", "r", encoding="utf-8") as file:  
+        content = file.readlines()  
+        print(len(content))  
 
 def count_words():
-    with open("test.txt", "r", encoding="utf-8") as file:  # Open in text mode
-        content = file.read()  # Read all the text
-        words = content.split()  # Split the text into words
-        print(len(words))  # Count words
+    with open("test.txt", "r", encoding="utf-8") as file:  
+        content = file.read()  
+        words = content.split()  
+        print(len(words))  
 
 def count_chars():
-    with open("test.txt", "r", encoding="utf-8") as file:  # Open in text mode
-        content = file.read()  # Read all the text
-        print(len(content))  # Count characters
+    with open("test.txt", "r", encoding="utf-8") as file: 
+        content = file.read()  
+        print(len(content))  
 
 def count_all():
-    with open("test.txt", "r", encoding="utf-8") as file:  # Open in text mode
-        content = file.read()  # Read all the text
-        lines = content.splitlines()  # Split the text by lines
-        words = content.split()  # Split the text by words
-        bytes_count = len(content.encode('utf-8'))  # Convert text to bytes
-        print(len(lines), len(words), bytes_count)  # Print lines, words, bytes
+    with open("test.txt", "r", encoding="utf-8") as file: 
+        content = file.read()  
+        lines = content.splitlines()
+        words = content.split()  
+        bytes_count = len(content.encode('utf-8'))  
+        print(len(lines), len(words), bytes_count) 
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
